@@ -17,6 +17,12 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
     mate: { title: "about" },
   },
+  {
+    path: "/directive",
+    name: "directive",
+    component: () => import("../views/DirectiveView.vue"),
+    mate: { title: "directive" },
+  },
 ];
 
 const router = createRouter({
