@@ -7,7 +7,7 @@
 </template>
 
 <script setup>
-import { ref, provide } from "vue";
+import { ref, provide, inject, onMounted } from "vue";
 import Lessons from "../components/LessonsComponent";
 const userName = ref("Mohammed Ziyad");
 const age = ref(27);
@@ -20,4 +20,11 @@ nameLessons.value = advancedLessons();
 provide("name", userName.value);
 provide("age", age.value);
 provide("advancedLessons", advancedLessons);
+//Emitter
+const emitter = inject("emitter");
+onMounted(() => {
+  emitter.on("globalEmit", (data) => {
+    console.log("the data is : ", data);
+  });
+});
 </script>
