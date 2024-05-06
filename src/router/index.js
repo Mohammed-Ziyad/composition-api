@@ -23,6 +23,12 @@ const routes = [
     component: () => import("../views/DirectiveView.vue"),
     mate: { title: "directive" },
   },
+  {
+    path: "/lessons",
+    name: "lessons",
+    component: () => import("../views/AdvancedView.vue"),
+    mate: { title: "lessons" },
+  },
 ];
 
 const router = createRouter({
