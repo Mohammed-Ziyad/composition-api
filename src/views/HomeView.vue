@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
+    <img src="../assets/logo.png" alt=" " />
     <HelloWorld msg="Use Mixins with props" />
     <h1>Use watch</h1>
     <h2>Counter is : {{ counter }}</h2>
